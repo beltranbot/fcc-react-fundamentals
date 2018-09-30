@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-const Intro = (props) => {
-    return (
-        <p className="App-intro">
-            Our first functional component
-        </p>
-    )
-}
+import Intro from './components/Intro'
 
 class App extends Component {
     render() {
         return (
             <div className="App">
                 <header className="App-header">
-                    {/* <img src={logo} className="App-logo" alt="logo" /> */}
-                    {/* <h1 className="App-title">Welcome to React</h1> */}
                     <h1 className="App-title">TV Series List</h1>
                 </header>
-                <Intro />
-                {/*  */}
+                <Intro
+                    message="Here you can find all of your most loved series"/>
             </div>
         );
     }
