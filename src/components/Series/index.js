@@ -7,8 +7,8 @@ class Series extends Component {
         series: []
     }
 
-    componentDidMount () {
-        fetch('http://api.tvmaze.com/search/shows?q=vikings')
+    onSeriesInputChange = e => {
+        fetch(`http://api.tvmaze.com/search/shows?q=${e.target.value}`)
             .then((response) => response.json())
             .then(series => this.setState({series}))
     }
@@ -17,6 +17,9 @@ class Series extends Component {
         return (
             <div>
                 The length of series array - {this.state.series.length}
+                <div>
+                    <input type="text" onChange={this.onSeriesInputChange}/>
+                </div>
                 <SeriesList list={this.state.series}/>
             </div>
         )
