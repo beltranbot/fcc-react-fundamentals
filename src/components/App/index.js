@@ -18,8 +18,8 @@ class App extends Component {
                     message="Here you can find all of your most loved series"/>
                 The length of series array - {this.state.series.length}
             </div>
-        );
+        )
     }
 }
 
-export default App;
+export default App
